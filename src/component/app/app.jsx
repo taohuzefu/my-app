@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import CommentAdd from '../comment-add/comment-add';
 import CommentList from '../comment-list/comment-list';
+import Table from '../component-echart/table';
 
 export default class App extends Component {
 
@@ -24,13 +25,14 @@ export default class App extends Component {
     this.setState(comments)
   }
   
+  
   render () {
 
     const {comments} = this.state
 
     return (
       <div>
-        <header className="site-header jumbotron">
+        {/* <header className="site-header jumbotron">
           <div className="container">
             <div className="row">
               <div className="col-xs-12">
@@ -42,7 +44,8 @@ export default class App extends Component {
         <div className="container">
           <CommentAdd addComment={this.addComment}/>
           <CommentList comments={comments} deleteComment={this.deleteComment}/>
-        </div>
+        </div> */}
+        <Table/>
       </div>
     )
   }
